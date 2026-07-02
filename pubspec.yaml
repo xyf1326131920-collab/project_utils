@@ -1,8 +1,9 @@
 name: project_utils
-description: "A new Flutter project."
+description: Flutter project utilities with platform version API, Toast helpers, and KeepAlive wrapper for TabBarView and PageView.
 version: 0.0.1
-homepage: 
-
+homepage: https://github.com/xyf1326131920-collab/project_utils
+repository: https://github.com/xyf1326131920-collab/project_utils
+issue_tracker: https://github.com/xyf1326131920-collab/project_utils/issues
 environment:
   sdk: '>=3.4.4 <4.0.0'
   flutter: '>=3.3.0'

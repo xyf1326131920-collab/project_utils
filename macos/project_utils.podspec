@@ -5,13 +5,13 @@
 Pod::Spec.new do |s|
   s.name             = 'project_utils'
   s.version          = '0.0.1'
-  s.summary          = 'A new Flutter project.'
+  s.summary          = 'Flutter project utilities plugin.'
   s.description      = <<-DESC
-A new Flutter project.
+Flutter project utilities with platform version API, Toast helpers, and KeepAlive wrapper.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/xyf1326131920-collab/project_utils'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'XiuYunFei' => 'https://github.com/xyf1326131920-collab' }
 
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'

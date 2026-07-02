@@ -49,33 +49,36 @@ class ToastUtils {
     return [BotToastNavigatorObserver(), ...?observers];
   }
 
-  // onClose: 关闭时的回调, 可用于Toast展示完成后重新请求数据等场景
-  static showText(String? loadingText, {VoidCallback? onClose}) {
-    if(loadingText == null || loadingText == "重复点击"){
-      return;
+  /// 显示纯文本 Toast。
+  static CancelFunc? showText(String? loadingText, {VoidCallback? onClose}) {
+    if (loadingText == null || loadingText == '重复点击') {
+      return null;
     }
     return _showToast(loadingText, _ToastType.text, onClose: onClose);
   }
 
-  static showSuccess(String? loadingText) {
+  /// 显示成功 Toast（带勾选图标）。
+  static CancelFunc? showSuccess(String? loadingText) {
     return _showToast(loadingText, _ToastType.success);
   }
 
-  static showError(String? loadingText) {
+  /// 显示错误 Toast（带错误图标）。
+  static CancelFunc? showError(String? loadingText) {
     return _showToast(loadingText, _ToastType.error);
   }
 
-  static showInfo(String? loadingText) {
+  /// 显示信息 Toast（带信息图标）。
+  static CancelFunc? showInfo(String? loadingText) {
     return _showToast(loadingText, _ToastType.info);
   }
 
-  static showLoadingText([loadingText = '加载中...']) {
+  /// 显示加载中 Toast，默认文案为「加载中...」。
+  static CancelFunc? showLoadingText([String loadingText = '加载中...']) {
     return _showLoading(loadingText);
   }
 
-  /// 隐藏所有Toast
-  /// 调用BotToast.showXxx都会返回一个CancelFunc函数,调用此函数将会提前关闭对应的Toast
-  static hide() {
+  /// 关闭所有 Loading Toast。
+  static void hide() {
     BotToast.closeAllLoading();
   }
 }

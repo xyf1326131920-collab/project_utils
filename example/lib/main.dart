@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
-import 'package:project_utils/print/toast_utils.dart';
 import 'package:project_utils/project_utils.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());

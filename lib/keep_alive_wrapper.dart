@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-/// 子项缓存
+/// 在 [TabBarView]、[PageView] 等可滚动容器中保持子页面状态。
 class KeepAliveWrapper extends StatefulWidget {
   const KeepAliveWrapper({
     super.key,
     this.keepAlive = true,
     required this.child,
   });
-  final bool keepAlive;
-  final Widget child;
+
+  /// 是否保持子组件状态，默认为 `true`。
+  final bool keepAlive;  final Widget child;
 
   @override
   KeepAliveWrapperState createState() => KeepAliveWrapperState();
